@@ -49,6 +49,9 @@ public class PlayerMovement : MonoBehaviour
     public ParticleSystem bloodEffect;
     public GameObject hitMarker;
 
+    public int kills;
+    public int deaths;
+
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
@@ -57,6 +60,15 @@ public class PlayerMovement : MonoBehaviour
 
         lastSpawn = spawns.spawnPoints[Random.Range(0, spawns.spawnPoints.Length - 1)];
         transform.position = lastSpawn;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Shield")
+        {
+            shield = maxShield;
+            Destroy(other.gameObject);
+        }
     }
 
     private void Update()
@@ -154,7 +166,7 @@ public class PlayerMovement : MonoBehaviour
                     }
                     else if(hit.collider.gameObject.tag == "Player")
                     {
-                        hit.collider.GetComponent<PlayerMovement>().TakeDamage((int)equippedGun.gunObject.baseDamage);
+                        hit.collider.GetComponent<PlayerMovement>().TakeDamage((int)equippedGun.gunObject.baseDamage, this);
                         StartCoroutine(HitMarker());
                     }
                 }
@@ -228,15 +240,29 @@ public class PlayerMovement : MonoBehaviour
             controller.height *= 2;
     }
 
-    void TakeDamage(int damage)
+    void TakeDamage(int damage, PlayerMovement damager)
     {
-        health -= damage;
-        if (health <= 0) StartCoroutine(Die());
+        if (shield > 0)
+        {
+            shield -= damage;
+        }
+        if(shield == 0) health -= damage;
+        if (shield < 0)
+        {
+            health -= Mathf.Abs(shield);
+            shield = 0;
+        }
+        if (health <= 0)
+        {
+            StartCoroutine(Die());
+            damager.kills++;
+        }
         bloodEffect.Play();
     }
 
     private IEnumerator Die()
     {
+        deaths++;
         deathScreen.gameObject.SetActive(true);
         shield = 0;
         GFX.SetActive(false);
