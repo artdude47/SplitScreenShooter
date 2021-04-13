@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb4482eb6082c842bcee8bc668787f4, type: 3}
+  m_Name: TestLevelSpawns
+  m_EditorClassIdentifier: 
+  spawnPoints:
+  - {x: 34, y: 0, z: 30}
+  - {x: 5, y: 0, z: 54}
+  - {x: 5, y: 15, z: 54}
+  - {x: 57, y: 0, z: 54}
+  - {x: 57, y: 15, z: 54}
+  - {x: 59, y: 0, z: 5}
+  - {x: 59, y: 15, z: 5}
+  - {x: 3, y: 0, z: 5}
+  - {x: 3, y: 15, z: 5}
+  - {x: 3, y: 15, z: 5}
+  - {x: 68, y: 0, z: 5}
+  - {x: 194, y: 0, z: 5}
+  - {x: 194, y: 0, z: 110}
+  - {x: 68, y: 0, z: 110}
+  - {x: 123, y: 0, z: 57}
+  - {x: 54, y: 0, z: 66}
+  - {x: 54, y: 15, z: 66}
+  - {x: 5, y: 0, z: 63}
+  - {x: 5, y: 15, z: 63}
+  - {x: 5, y: 0, z: 112}
+  - {x: 5, y: 15, z: 112}
+  - {x: 57, y: 0, z: 112}
+  - {x: 57, y: 15, z: 112}
+  - {x: 35, y: 0, z: 89}
+  - {x: 35, y: 15, z: 89}
