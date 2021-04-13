@@ -15,10 +15,15 @@ public class GunSO : ScriptableObject
     public GameObject bulletHole;
     public AudioClip gunShot;
     public AudioClip emptySound;
+    public AudioClip reloadSound;
 
     public float recoil;
     public float aimSpeed;
     public Vector3 adsLocation;
     public Vector3 holdLocation;
     public AnimationClip reloadClip;
+
+    public int maxMags;
+    public int startingMags;
+    public int ammoType;
 }

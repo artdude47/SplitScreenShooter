@@ -66,14 +66,23 @@ public class PlayerMovement : MonoBehaviour
     {
         if(other.gameObject.tag == "Shield")
         {
+            Debug.Log("Added shield");
             shield = maxShield;
             Destroy(other.gameObject);
+        }
+        if(other.gameObject.tag == "Ammo")
+        {
+            if(other.GetComponent<AmmoPickup>().ammoType == equippedGun.gunObject.ammoType && equippedGun.mags < equippedGun.gunObject.maxMags)
+            {
+                equippedGun.mags++;
+                Destroy(other.gameObject);
+            }
         }
     }
 
     private void Update()
     {
-        if (equippedGun.currentAmmo == 0 && !reloading) StartCoroutine(ReloadWeapon());
+        if (equippedGun.currentAmmo == 0 && !reloading && equippedGun.mags > 0) StartCoroutine(ReloadWeapon());
         onGround = Physics.CheckSphere(groundCheck.position, groundDistance, groundLayer);
 
         //if on ground stay on the ground
@@ -174,7 +183,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 playerAudio.clip = equippedGun.gunObject.emptySound;
                 playerAudio.Play();
-                if(!reloading)
+                if(!reloading && equippedGun.mags > 0)
                     StartCoroutine(ReloadWeapon());
             }
         }
@@ -188,6 +197,8 @@ public class PlayerMovement : MonoBehaviour
     }
     private IEnumerator ReloadWeapon()
     {
+        playerAudio.clip = equippedGun.gunObject.reloadSound;
+        playerAudio.Play();
         equippedGun.animator.enabled = true;
         reloading = true;
         equippedGun.animator.SetBool("Reloading", true);
@@ -195,6 +206,7 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(equippedGun.gunObject.reloadTime);
         equippedGun.animator.SetBool("Reloading", false);
         equippedGun.currentAmmo = equippedGun.gunObject.maxAmmo;
+        equippedGun.mags--;
         reloading = false;
     }
     private IEnumerator ShotEffect()

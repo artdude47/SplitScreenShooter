@@ -18,12 +18,16 @@ MonoBehaviour:
   headMultiplier: 2
   fireRate: 0.25
   weaponRange: 500
-  reloadTime: 0.25
+  reloadTime: 0.75
   bulletHole: {fileID: 1088026815981574039, guid: 2d1f47291066cb84fafcaa671e05130c, type: 3}
   gunShot: {fileID: 8300000, guid: e05e69c2db65890428905f7c1933dd50, type: 3}
   emptySound: {fileID: 8300000, guid: e61403511aae4d24eb25a7c2bf1e78a8, type: 3}
+  reloadSound: {fileID: 8300000, guid: cc61ff4d89e67914b861523f7c0cd0bb, type: 3}
   recoil: 0
   aimSpeed: 15
   adsLocation: {x: -0.654, y: 0.2, z: 0.2}
   holdLocation: {x: 0.1, y: -0.05, z: 0.2}
   reloadClip: {fileID: 7332139420686511986, guid: 2946931c3385e9f498655cd00dae4552, type: 3}
+  maxMags: 6
+  startingMags: 2
+  ammoType: 1

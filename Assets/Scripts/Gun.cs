@@ -10,11 +10,13 @@ public class Gun : MonoBehaviour
     public Transform gunEnd;
     public ParticleSystem muzzleFlash;
     public Animator animator;
+    public int mags;
 
     // Start is called before the first frame update
     void Start()
     {
         currentAmmo = gunObject.maxAmmo;
+        mags = gunObject.startingMags;
         muzzleFlash = GetComponentInChildren<ParticleSystem>();
         animator = GetComponent<Animator>();
     }

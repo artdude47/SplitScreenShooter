@@ -14,6 +14,6 @@ public class AmmoUI : MonoBehaviour
     }
     private void Update()
     {
-        text.text = playerRef.equippedGun.currentAmmo.ToString() + " / " + playerRef.equippedGun.gunObject.maxAmmo.ToString();
+        text.text = playerRef.equippedGun.currentAmmo.ToString() + " / " + playerRef.equippedGun.gunObject.maxAmmo * playerRef.equippedGun.mags;
     }
 }
