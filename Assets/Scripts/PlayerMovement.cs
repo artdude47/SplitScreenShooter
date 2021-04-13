@@ -46,6 +46,9 @@ public class PlayerMovement : MonoBehaviour
     Vector3 lastSpawn;
     public Image deathScreen;
 
+    public ParticleSystem bloodEffect;
+    public GameObject hitMarker;
+
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
@@ -152,6 +155,7 @@ public class PlayerMovement : MonoBehaviour
                     else if(hit.collider.gameObject.tag == "Player")
                     {
                         hit.collider.GetComponent<PlayerMovement>().TakeDamage((int)equippedGun.gunObject.baseDamage);
+                        StartCoroutine(HitMarker());
                     }
                 }
             } else
@@ -189,6 +193,13 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    private IEnumerator HitMarker()
+    {
+        hitMarker.SetActive(true);
+        yield return new WaitForSeconds(.25f);
+        hitMarker.SetActive(false);
+    }
+
     void OnJump()
     {
         Debug.Log("Jumping");
@@ -221,6 +232,7 @@ public class PlayerMovement : MonoBehaviour
     {
         health -= damage;
         if (health <= 0) StartCoroutine(Die());
+        bloodEffect.Play();
     }
 
     private IEnumerator Die()
