@@ -19514,6 +19514,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4448046037046985565, guid: f69347cdc8f187e46ad5ae8bd7f0f8c3, type: 3}
+      propertyPath: armorSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 523cc7de4bec22a4e9b3ca2af8bfaa0c, type: 3}
     - target: {fileID: 7683533240243357950, guid: f69347cdc8f187e46ad5ae8bd7f0f8c3, type: 3}
       propertyPath: m_RootOrder
       value: 1

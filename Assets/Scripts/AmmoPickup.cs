@@ -5,4 +5,5 @@ using UnityEngine;
 public class AmmoPickup : MonoBehaviour
 {
     public int ammoType;
+    public AudioClip pickupSound;
 }

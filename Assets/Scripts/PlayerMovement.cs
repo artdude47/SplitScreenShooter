@@ -53,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
     public int kills;
     public int deaths;
     public CinemachineVirtualCamera vCam;
+    public AudioClip armorSound;
 
     private void Awake()
     {
@@ -70,15 +71,23 @@ public class PlayerMovement : MonoBehaviour
     {
         if(other.gameObject.tag == "Shield")
         {
-            Debug.Log("Added shield");
-            shield = maxShield;
-            Destroy(other.gameObject);
+            if (shield != maxShield)
+            {
+                shield = maxShield;
+                Destroy(other.gameObject);
+                playerAudio.clip = armorSound;
+                playerAudio.Play();
+            }
+                
         }
         if(other.gameObject.tag == "Ammo")
         {
             if(other.GetComponent<AmmoPickup>().ammoType == equippedGun.gunObject.ammoType && equippedGun.mags < equippedGun.gunObject.maxMags)
             {
-                equippedGun.mags++;
+                playerAudio.clip = other.GetComponent<AmmoPickup>().pickupSound;
+                playerAudio.Play();
+                equippedGun.mags += 12;
+                if (equippedGun.mags > equippedGun.gunObject.maxMags) equippedGun.mags = equippedGun.gunObject.maxMags;
                 Destroy(other.gameObject);
             }
         }
@@ -209,8 +218,17 @@ public class PlayerMovement : MonoBehaviour
         equippedGun.animator.speed = equippedGun.gunObject.reloadClip.length / equippedGun.gunObject.reloadTime;
         yield return new WaitForSeconds(equippedGun.gunObject.reloadTime);
         equippedGun.animator.SetBool("Reloading", false);
-        equippedGun.currentAmmo = equippedGun.gunObject.maxAmmo;
-        equippedGun.mags--;
+        var neededAmmo = equippedGun.gunObject.maxAmmo - equippedGun.currentAmmo;
+        if (equippedGun.mags >= neededAmmo)
+        {
+            equippedGun.currentAmmo = equippedGun.gunObject.maxAmmo;
+            equippedGun.mags -= neededAmmo;
+        } else
+        {
+            neededAmmo = equippedGun.mags;
+            equippedGun.currentAmmo = neededAmmo;
+            equippedGun.mags -= neededAmmo;
+        }
         reloading = false;
     }
     private IEnumerator ShotEffect()
