@@ -4897,7 +4897,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -20}
-  m_SizeDelta: {x: 30, y: 5}
+  m_SizeDelta: {x: 30, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &60574790
 CanvasRenderer:
@@ -4972,7 +4972,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 20, y: 0}
-  m_SizeDelta: {x: 30, y: 5}
+  m_SizeDelta: {x: 30, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &84867902
 CanvasRenderer:
@@ -5161,7 +5161,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 20}
-  m_SizeDelta: {x: 30, y: 5}
+  m_SizeDelta: {x: 30, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &686627628
 CanvasRenderer:
@@ -5436,7 +5436,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -20, y: 0}
-  m_SizeDelta: {x: 30, y: 5}
+  m_SizeDelta: {x: 30, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1457112537
 CanvasRenderer:
@@ -5743,6 +5743,7 @@ MonoBehaviour:
   gunEnd: {fileID: 1784868043}
   muzzleFlash: {fileID: 8732726}
   animator: {fileID: 919132149451285287}
+  mags: 0
 --- !u!95 &919132149451285287
 Animator:
   serializedVersion: 3
@@ -11740,7 +11741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb7194dc27b9df64c8beca7482ee8e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerIndex: 0
+  PlayerIndex: 12
   XYAxis: {fileID: -8094881046366624978, guid: 0b06119cd028fc24a83193150e07543b, type: 3}
   ZAxis: {fileID: 0}
 --- !u!1 &7683533239174366792
@@ -12072,6 +12073,7 @@ MonoBehaviour:
   hitMarker: {fileID: 7074182553276318222}
   kills: 0
   deaths: 0
+  vCam: {fileID: 7683533238934093908}
 --- !u!120 &1942913668
 LineRenderer:
   m_ObjectHideFlags: 0

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using Cinemachine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -51,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
 
     public int kills;
     public int deaths;
+    public CinemachineVirtualCamera vCam;
 
     private void Awake()
     {
@@ -60,6 +62,8 @@ public class PlayerMovement : MonoBehaviour
 
         lastSpawn = spawns.spawnPoints[Random.Range(0, spawns.spawnPoints.Length - 1)];
         transform.position = lastSpawn;
+
+        vCam.GetComponent<CinemachineInputProvider>().PlayerIndex = this.GetComponent<PlayerInput>().playerIndex;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -234,7 +238,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(equippedGun != null)
         {
-            if (equippedGun.currentAmmo != equippedGun.gunObject.maxAmmo) StartCoroutine(ReloadWeapon());
+            if (equippedGun.currentAmmo != equippedGun.gunObject.maxAmmo && equippedGun.mags > 0) StartCoroutine(ReloadWeapon());
         }
     }
 
