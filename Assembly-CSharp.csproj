@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\AmmoPickup.cs" />
     <Compile Include="Assets\Scripts\UI\ArmorUI.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\SpawnPointSO.cs" />
+    <Compile Include="Assets\Scripts\UI\StartButton.cs" />
     <Compile Include="Assets\Scripts\BulletDespawn.cs" />
     <Compile Include="Assets\Scripts\UI\HealthUI.cs" />
     <Compile Include="Assets\Scripts\UI\KillDeathUI.cs" />
@@ -66,7 +67,8 @@
     <Compile Include="Assets\Scripts\ScriptableObjects\GunSO.cs" />
     <Compile Include="Assets\Scripts\Gun.cs" />
     <Compile Include="Assets\Scripts\UI\AmmoUI.cs" />
-    <Compile Include="Assets\Scripts\UI\StartButton.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\WinConditionSO.cs" />
+    <Compile Include="Assets\Scripts\UI\WinScreen.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

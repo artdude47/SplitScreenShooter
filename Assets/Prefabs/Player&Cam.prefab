@@ -12074,6 +12074,8 @@ MonoBehaviour:
   kills: 0
   deaths: 0
   vCam: {fileID: 7683533238934093908}
+  armorSound: {fileID: 8300000, guid: 523cc7de4bec22a4e9b3ca2af8bfaa0c, type: 3}
+  winCondition: {fileID: 11400000, guid: 42e0354db5d1b0f4dae4e61431dc622e, type: 2}
 --- !u!120 &1942913668
 LineRenderer:
   m_ObjectHideFlags: 0

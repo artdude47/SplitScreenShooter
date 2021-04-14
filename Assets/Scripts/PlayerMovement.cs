@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -55,6 +56,8 @@ public class PlayerMovement : MonoBehaviour
     public CinemachineVirtualCamera vCam;
     public AudioClip armorSound;
 
+    public WinConditionSO winCondition;
+
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
@@ -95,6 +98,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (kills >= winCondition.killsToWin) Win();
         if (equippedGun.currentAmmo == 0 && !reloading && equippedGun.mags > 0) StartCoroutine(ReloadWeapon());
         onGround = Physics.CheckSphere(groundCheck.position, groundDistance, groundLayer);
 
@@ -315,6 +319,12 @@ public class PlayerMovement : MonoBehaviour
         equippedGun.gameObject.SetActive(true);
         health = maxHealth;
         deathScreen.gameObject.SetActive(false);
+    }
+
+    private void Win()
+    {
+        winCondition.playerWhoWon = GetComponent<PlayerInput>().playerIndex + 1;
+        SceneManager.LoadScene(2);
     }
 
 }

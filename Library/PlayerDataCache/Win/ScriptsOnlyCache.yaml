@@ -12,6 +12,8 @@ ScriptsOnlyBuild:
     - PlayerMovement
     - SpawnPointSO
     - StartButton
+    - WinConditionSO
+    - WinScreen
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
     - Cinemachine.CinemachineHardLockToTarget
@@ -303,6 +305,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 7060}
     - Class: 114
       Script: {instanceID: 7742}
+    - Class: 114
+      Script: {instanceID: 20762}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -332,6 +336,63 @@ ScriptsOnlyBuild:
     - Class: 258
       Script: {instanceID: 0}
     - Class: 850595691
+      Script: {instanceID: 0}
+    Assets/Scenes/WinScreen.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1614}
+    - Class: 114
+      Script: {instanceID: 1616}
+    - Class: 114
+      Script: {instanceID: 1622}
+    - Class: 114
+      Script: {instanceID: 1666}
+    - Class: 114
+      Script: {instanceID: 2596}
+    - Class: 114
+      Script: {instanceID: 3050}
+    - Class: 114
+      Script: {instanceID: 3602}
+    - Class: 114
+      Script: {instanceID: 6426}
+    - Class: 114
+      Script: {instanceID: 7060}
+    - Class: 114
+      Script: {instanceID: 20762}
+    - Class: 114
+      Script: {instanceID: 24118}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -558,7 +619,7 @@ ScriptsOnlyBuild:
     className: CinemachineVirtualCamera
   - hash:
       serializedVersion: 2
-      Hash: 28bb408404ab1821f40b7af079f60645
+      Hash: 93ae87e968e1d11c5b39ca3d0f2e9bc5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AmmoPickup
@@ -1302,7 +1363,7 @@ ScriptsOnlyBuild:
     className: AspectRatioFitter
   - hash:
       serializedVersion: 2
-      Hash: 1b0c03bd3814360a78ffdde5940c380b
+      Hash: 21b589c9393e22ca970f7ba2b380debb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovement
@@ -1726,9 +1787,22 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: a083844e427845afbd7610ccaca0e9ae
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WinConditionSO
+  - hash:
+      serializedVersion: 2
+      Hash: f8dd77f3f06a0532544b6e74e7afe8fa
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WinScreen
   platform: 5
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/SampleScene.unity
+  - Assets/Scenes/WinScreen.unity
   playerPath: G:/Projects/3D Games/Multiplayer Game/Split Screen Multiplayer Games/Builds/Split
     Screen Multiplayer Games.exe
