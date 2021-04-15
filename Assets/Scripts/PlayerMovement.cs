@@ -258,8 +258,8 @@ public class PlayerMovement : MonoBehaviour
 
     void OnJump()
     {
-        Debug.Log("Jumping");
-        fallVelocity += jumpStr;
+        if(onGround)
+            fallVelocity += jumpStr;
     }
 
     void OnReload()
@@ -318,6 +318,8 @@ public class PlayerMovement : MonoBehaviour
         {
             temp = spawns.spawnPoints[Random.Range(0, spawns.spawnPoints.Length - 1)];
         } while (temp == lastSpawn);
+        equippedGun.currentAmmo = equippedGun.gunObject.maxAmmo;
+        equippedGun.mags = equippedGun.gunObject.startingMags;
         transform.position = temp;
         lastSpawn = temp;
         controller.enabled = true;

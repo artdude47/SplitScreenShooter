@@ -166,35 +166,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5224}
     - Class: 114
-      Script: {instanceID: 5474}
+      Script: {instanceID: 5476}
     - Class: 114
-      Script: {instanceID: 5732}
+      Script: {instanceID: 5734}
     - Class: 114
-      Script: {instanceID: 5802}
+      Script: {instanceID: 5804}
     - Class: 114
-      Script: {instanceID: 5808}
+      Script: {instanceID: 5810}
     - Class: 114
-      Script: {instanceID: 5892}
+      Script: {instanceID: 5894}
     - Class: 114
-      Script: {instanceID: 5930}
+      Script: {instanceID: 5932}
     - Class: 114
-      Script: {instanceID: 5974}
+      Script: {instanceID: 5976}
     - Class: 114
-      Script: {instanceID: 6152}
+      Script: {instanceID: 6154}
     - Class: 114
-      Script: {instanceID: 6294}
+      Script: {instanceID: 6296}
     - Class: 114
-      Script: {instanceID: 6412}
+      Script: {instanceID: 6414}
     - Class: 114
-      Script: {instanceID: 6428}
+      Script: {instanceID: 6430}
     - Class: 114
-      Script: {instanceID: 7064}
+      Script: {instanceID: 7066}
     - Class: 114
-      Script: {instanceID: 7104}
+      Script: {instanceID: 7106}
     - Class: 114
-      Script: {instanceID: 7396}
+      Script: {instanceID: 7398}
     - Class: 114
-      Script: {instanceID: 7626}
+      Script: {instanceID: 7628}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -289,27 +289,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5118}
     - Class: 114
-      Script: {instanceID: 5544}
+      Script: {instanceID: 5388}
     - Class: 114
-      Script: {instanceID: 5554}
+      Script: {instanceID: 5546}
     - Class: 114
-      Script: {instanceID: 5702}
+      Script: {instanceID: 5556}
     - Class: 114
-      Script: {instanceID: 6134}
+      Script: {instanceID: 5704}
     - Class: 114
-      Script: {instanceID: 6220}
+      Script: {instanceID: 6136}
     - Class: 114
-      Script: {instanceID: 6428}
+      Script: {instanceID: 6222}
     - Class: 114
-      Script: {instanceID: 6506}
+      Script: {instanceID: 6430}
     - Class: 114
-      Script: {instanceID: 6878}
+      Script: {instanceID: 6508}
     - Class: 114
-      Script: {instanceID: 7064}
+      Script: {instanceID: 6880}
     - Class: 114
-      Script: {instanceID: 7746}
+      Script: {instanceID: 7066}
     - Class: 114
-      Script: {instanceID: 40038}
+      Script: {instanceID: 7748}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -374,13 +374,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3602}
     - Class: 114
-      Script: {instanceID: 6386}
+      Script: {instanceID: 6388}
     - Class: 114
-      Script: {instanceID: 6428}
+      Script: {instanceID: 6430}
     - Class: 114
-      Script: {instanceID: 6506}
+      Script: {instanceID: 6508}
     - Class: 114
-      Script: {instanceID: 7064}
+      Script: {instanceID: 7066}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1300,6 +1300,12 @@ ScriptsOnlyBuild:
     className: VolumeComponent
   - hash:
       serializedVersion: 2
+      Hash: 1fa7e3822ff4cf8b1d9b6dea224d86a4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BarrelShot
+  - hash:
+      serializedVersion: 2
       Hash: 295831406da5907d41f58d84acd55d8d
     assemblyName: Unity.InputSystem.dll
     namespaceName: UnityEngine.InputSystem.Editor
@@ -1802,12 +1808,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
-  - hash:
-      serializedVersion: 2
-      Hash: 1fa7e3822ff4cf8b1d9b6dea224d86a4
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BarrelShot
   platform: 5
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

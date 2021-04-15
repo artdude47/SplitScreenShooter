@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Glock
   m_EditorClassIdentifier: 
   gunName: Glock
-  maxAmmo: 12
+  maxAmmo: 15
   baseDamage: 25
   headMultiplier: 2
   fireRate: 0.25
@@ -28,6 +28,6 @@ MonoBehaviour:
   adsLocation: {x: -0.654, y: 0.2, z: 0.2}
   holdLocation: {x: 0.1, y: -0.05, z: 0.2}
   reloadClip: {fileID: 7332139420686511986, guid: 2946931c3385e9f498655cd00dae4552, type: 3}
-  maxMags: 60
-  startingMags: 24
+  maxMags: 90
+  startingMags: 45
   ammoType: 1
