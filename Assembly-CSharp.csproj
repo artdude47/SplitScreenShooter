@@ -66,9 +66,10 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\GunSO.cs" />
     <Compile Include="Assets\Scripts\Gun.cs" />
-    <Compile Include="Assets\Scripts\UI\AmmoUI.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\WinConditionSO.cs" />
     <Compile Include="Assets\Scripts\UI\WinScreen.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\WinConditionSO.cs" />
+    <Compile Include="Assets\Scripts\UI\AmmoUI.cs" />
+    <Compile Include="Assets\Scripts\BarrelShot.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

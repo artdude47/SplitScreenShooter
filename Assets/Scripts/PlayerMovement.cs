@@ -190,6 +190,12 @@ public class PlayerMovement : MonoBehaviour
                         //make bullet hole
                         SpawnBulletHole(hit);
                     }
+                    else if(hit.collider.gameObject.tag == "Barrel")
+                    {
+                        playerAudio.clip = hit.collider.GetComponent<BarrelShot>().explosion;
+                        playerAudio.Play();
+                        hit.collider.GetComponent<BarrelShot>().Shot();
+                    }
                     else if(hit.collider.gameObject.tag == "Player")
                     {
                         hit.collider.GetComponent<PlayerMovement>().TakeDamage((int)equippedGun.gunObject.baseDamage, this);
